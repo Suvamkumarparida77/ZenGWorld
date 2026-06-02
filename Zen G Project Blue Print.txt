@@ -1,0 +1,177 @@
+My Strong Recommendation for ZEN G Entertainment
+Build:
+“ZEN G WORLD”
+
+One platform combining:
+
+Shorts
+Live streaming
+OTT
+Gaming
+Creator monetization
+Fan community
+AI tools
+
+Basically:
+
+India’s entertainment metaverse ecosystem.
+
+This can become:
+
+Entertainment app
+Creator economy platform
+Talent discovery platform
+Virtual events ecosystem
+Suggested Tech Stack
+Mobile
+Flutter
+React Native
+Backend
+Spring Boot
+Node.js
+Firebase
+Streaming
+Agora
+Wowza
+AWS IVS
+AI
+OpenAI APIs
+Stable Diffusion
+ElevenLabs
+Cloud
+AWS
+GCP
+Good Brand Name Ideas
+ZEN G WORLD
+ZEN G PLAY
+ZEN G LIVE
+ZEN G HUB
+ZEN G VERSE
+ZEN G STUDIO
+ZEN G X
+Biggest Opportunity
+
+India has:
+
+YouTube creators
+Reels creators
+Gaming streamers
+Regional artists
+
+
+ZenGWorld/
+├── backend/ (Java Spring Boot)
+│   └── src/main/java/com/zeng/
+│       ├── config/
+│       │   └── CorsConfig.java
+│       ├── controller/
+│       │   ├── AuthController.java
+│       │   └── HomeController.java
+│       └── ZengWorldApplication.java (Main file)
+│
+└── frontend/ (React)
+    ├── public/
+    ├── src/
+    │   ├── components/
+    │   │   ├── Sidebar.js
+    │   │   └── Sidebar.css
+    │   ├── pages/
+    │   │   ├── LoginPage.js
+    │   │   ├── LoginPage.css
+    │   │   ├── CommunityPage.js
+    │   │   ├── CommunityPage.css
+    │   │   ├── UploadPage.js
+    │   │   ├── UploadPage.css
+    │   │   ├── ShortsPage.js
+    │   │   ├── ShortsPage.css
+    │   │   ├── OttPage.js
+    │   │   ├── OttPage.css
+    │   │   ├── GamingPage.js
+    │   │   ├── GamingPage.css
+    │   │   ├── ProfilePage.js
+    │   │   └── ProfilePage.css
+    │   ├── App.js
+    │   ├── App.css
+    │   └── index.js
+
+
+
+
+PROJECT BLUEPRINT: ZEN G WORLD
+1. Project Overview
+ZEN G WORLD is a next-generation Entertainment & Creator Economy Platform designed specifically for the Indian market. It combines the features of major platforms like Instagram (Reels), YouTube (OTT), Twitch (Gaming), and TikTok into a single, unified ecosystem.
+
+2. The Vision
+To create a "Super App" for digital entertainment where users can:
+
+Consume: Watch Shorts, Long-form Videos, and Live Streams.
+Create: Upload content easily via Web or Mobile.
+Monetize: Earn virtual currency ("Zen G Coins") and real money through views and gifts.
+Socialize: Connect with a community of creators and fans.
+3. Target Audience
+Gen Z & Content Creators: Looking for an alternative to YouTube/Instagram that offers better monetization.
+Gamers: For streaming esports and tournaments.
+Regional Audiences: Support for multi-language content (Hindi, Tamil, etc.).
+4. Key Features
+A. The Ecosystem (Web Portal)
+Dashboard:
+Overview of earnings (Coin Balance).
+Analytics (Total Views, Subscribers).
+Quick access to all sections.
+Shorts (Reels):
+Vertical 9:16 video feed.
+One-by-one Scrolling: TikTok-style snap scrolling.
+Filters: Real-time CSS filters (Sepia, Grayscale).
+Camera Integration: Direct webcam recording.
+Social Sidebar: Likes, Comments, Shares, and Music Disc.
+OTT (Long Video):
+Horizontal 16:9 video player.
+Categories: Entertainment, Gaming, Music, Education.
+Hero Banner: Featured content.
+Gaming (Esports):
+Live Tournament Stream viewer.
+Match listings (Live vs Upcoming).
+Game Library.
+Community:
+Creator discovery network.
+"Who to Follow" suggestions.
+Glassmorphism UI: Modern, translucent design.
+Creator Studio (Upload):
+Dual Mode: Toggle between "Shorts" and "Long Video".
+Smart Upload: Auto-detects aspect ratio.
+Metadata: Title, Description, Category, Thumbnail, Visibility.
+Profile:
+User stats (Followers, Views).
+Editable details.
+Wallet balance display.
+5. Technology Stack
+Frontend (The Face)
+Framework: React.js
+Routing: React Router DOM
+Styling: CSS3 (Flexbox, Grid, Glassmorphism, Animations)
+State Management: React Hooks (useState, useEffect)
+Backend (The Brain)
+Framework: Java Spring Boot
+Language: Java 17
+Build Tool: Maven
+Security: (Planned) Spring Security / JWT
+Database (The Memory)
+Platform: Supabase (PostgreSQL) - Free Tier
+Structure: Users Table, Videos Table.
+Deployment (Zero Cost)
+Backend: Render.com
+Frontend: Vercel
+Database: Supabase
+6. Unique Selling Points (USP)
+"Zen G Coins": A unified currency system that rewards engagement across all formats (Shorts, OTT, Gaming).
+Creator-First Design: The "Upload" interface is optimized for both mobile (vertical) and desktop (horizontal) workflows.
+All-in-One: Eliminates the need to switch apps. Watch shorts, stream games, and watch movies in one place.
+7. Future Roadmap
+Phase 1 (Current): Web Portal MVP.
+Phase 2: Connect Database (Save real videos/users).
+Phase 3: Mobile App (React Native).
+Phase 4: Live Streaming Implementation (WebRTC).
+Phase 5: AI Integration (Auto-captions, Content recommendations).
+Developer: Suvam
+Status: MVP Complete (Web Portal)
+Version: 1.0

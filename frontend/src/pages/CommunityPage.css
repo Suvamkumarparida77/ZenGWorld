@@ -1,0 +1,165 @@
+.app-layout {
+  display: flex;
+  height: 100vh;
+  background: #050505; /* Extra Dark Background */
+}
+
+.community-main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+  background: radial-gradient(circle at top right, #2e1065 0%, #050505 40%);
+}
+
+/* --- HEADER --- */
+.community-header {
+  margin-bottom: 40px;
+}
+
+.community-header h1 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 10px;
+  background: linear-gradient(to right, #fff, #a78bfa);
+  
+  -webkit-text-fill-color: transparent;
+}
+
+.community-header p {
+  color: #a1a1aa;
+  font-size: 18px;
+}
+
+/* --- GRID --- */
+.creators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* --- CREATOR CARD (The New Style) --- */
+.creator-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.creator-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.2); /* Neon Glow */
+  border-color: #8b5cf6;
+}
+
+/* GLASSMORPHISM EFFECT */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.03); /* Very transparent */
+  backdrop-filter: blur(10px); /* Blur background behind card */
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* --- CARD CONTENT --- */
+.card-top {
+  position: relative;
+  height: 100px;
+}
+
+.card-banner {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(45deg, #4c1d95, #ec4899);
+}
+
+.creator-avatar {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #000;
+  border: 3px solid #050505;
+  padding: 2px;
+}
+
+.card-body {
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+}
+
+.card-body h3 {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.handle {
+  color: #a1a1aa;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.role-badge {
+  display: inline-block;
+  background: rgba(139, 92, 246, 0.1);
+  color: #c4b5fd;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.stats-row {
+  color: #e4e4e7;
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* --- BUTTONS --- */
+.card-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-follow {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #8b5cf6;
+  background: transparent;
+  color: #8b5cf6;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-follow:hover {
+  background: #8b5cf6;
+  color: white;
+}
+
+.btn-follow.following {
+  background: #8b5cf6;
+  color: white;
+  border-color: #8b5cf6;
+}
+
+.btn-view {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #27272a;
+  background: #18181b;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background: #27272a;
+}

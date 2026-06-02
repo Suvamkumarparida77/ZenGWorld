@@ -1,0 +1,252 @@
+.app-layout {
+    display: flex;
+    height: 100vh;
+    background: #09090b;
+}
+
+.upload-main {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.page-title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+/* --- TYPE SWITCHER --- */
+.type-switcher {
+    display: flex;
+    background: #18181b;
+    padding: 5px;
+    border-radius: 12px;
+    width: fit-content;
+    margin-bottom: 30px;
+    border: 1px solid #27272a;
+}
+
+.switch-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: #a1a1aa;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.switch-btn.active {
+    background: #27272a;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- LAYOUT --- */
+.upload-container {
+    max-width: 1100px;
+}
+
+.upload-split {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* --- PREVIEW AREA --- */
+.preview-area {
+    background: #000;
+    border-radius: 20px;
+    border: 1px solid #27272a;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+
+    /* Default to Shorts (9:16) */
+    width: 300px;
+    height: 533px;
+}
+
+/* OTT Mode (16:9) - We will change this dynamically via inline style in JS if needed, 
+   or use CSS classes. For simplicity, let's stick to fixed sizes per class if we added classes,
+   but here we used inline styles potentially. Let's use a class modifier. */
+.preview-area.ott-mode {
+    width: 480px;
+    /* Wide */
+    height: 270px;
+    /* 16:9 */
+}
+
+.empty-state {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: #a1a1aa;
+}
+
+.empty-state .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.empty-state h3 {
+    color: white;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.upload-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn-upload {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+}
+
+.btn-record {
+    background: transparent;
+    border: 1px solid #52525b;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.video-preview-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.preview-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* --- FORM --- */
+.details-form {
+    flex: 1;
+}
+
+.details-form h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #e4e4e7;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.caption-input {
+    width: 100%;
+    background: #18181b;
+    border: 1px solid #27272a;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+}
+
+.cover-upload {
+    width: 100%;
+    height: 100px;
+    border: 2px dashed #3f3f46;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cover-upload label {
+    width: 100%;
+    text-align: center;
+    color: #71717a;
+    font-size: 13px;
+}
+
+.visibility-options {
+    display: flex;
+    gap: 20px;
+}
+
+.radio-label {
+    color: #a1a1aa;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.btn-discard {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.btn-post {
+    background: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-post:disabled {
+    background: #3f3f46;
+    cursor: not-allowed;
+}

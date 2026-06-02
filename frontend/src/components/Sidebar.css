@@ -1,0 +1,234 @@
+.sidebar {
+  width: 260px;
+  background: #09090b; /* Very Dark Background */
+  height: 100vh;
+  border-right: 1px solid #27272a;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+/* --- HEADER --- */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+
+.sidebar-header:hover .logo-icon {
+  box-shadow: 0 0 15px #8b5cf6; /* Glow effect */
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  background: #8b5cf6;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+  transition: 0.3s;
+}
+
+.logo-text {
+  display: flex;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+  color: white;
+}
+
+.logo-text .highlight {
+  color: #8b5cf6;
+  margin-left: 4px;
+}
+
+/* --- NAV MENU --- */
+.nav-menu {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #a1a1aa; /* Muted text */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #18181b; /* Secondary bg */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+/* Hover State */
+.nav-item:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-item:hover .icon-box {
+  background: #27272a; /* Slightly lighter hover bg */
+}
+
+/* ACTIVE STATE (The Premium Look) */
+.nav-item.active {
+  background: rgba(139, 92, 246, 0.15); /* Primary with opacity */
+  color: #8b5cf6; /* Primary Text */
+  box-shadow: inset 0 0 0 1px rgba(139, 92, 246, 0.2); /* Subtle border */
+}
+
+.nav-item.active .icon-box {
+  background: #8b5cf6;
+  color: white;
+  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.25);
+}
+
+.active-dot {
+  width: 6px;
+  height: 6px;
+  background: #8b5cf6;
+  border-radius: 50%;
+  margin-left: auto; /* Push to right */
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* --- SUGGESTED USERS --- */
+.suggested-section {
+  margin-top: 20px;
+}
+
+.suggested-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
+
+.suggested-header span:first-child {
+  color: #a1a1aa;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.see-all {
+  color: #8b5cf6;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.suggested-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.user-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.user-row:hover .user-avatar {
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.user-handle {
+  color: #71717a;
+  font-size: 11px;
+}
+
+.btn-follow-mini {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #3f3f46;
+  background: transparent;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-follow-mini:hover {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+  background: rgba(139, 92, 246, 0.1);
+}
+
+.btn-follow-mini.following {
+  background: #8b5cf6;
+  color: white;
+  border-color: #8b5cf6;
+  transform: scale(1.1);
+}
+
+/* --- LOGOUT --- */
+.logout-btn {
+  margin-top: 10px;
+  color: #ef4444;
+  font-weight: 600;
+}
+.logout-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}

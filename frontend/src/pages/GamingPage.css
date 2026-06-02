@@ -1,0 +1,262 @@
+.app-layout { display: flex; height: 100vh; background: #09090b; }
+
+.gaming-main {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* --- FILTER BAR --- */
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.filter-chip {
+  background: #18181b;
+  border: 1px solid #27272a;
+  color: #a1a1aa;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.filter-chip:hover { background: #27272a; color: white; }
+.filter-chip.active {
+  background: #8b5cf6;
+  color: white;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+/* --- HERO STREAM (TV LOOK) --- */
+.hero-stream {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Large hero */
+  background: #000;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.stream-bg {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; /* Dim the image so text pops */
+}
+
+.stream-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px;
+  z-index: 2;
+}
+
+.stream-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: auto; /* Push to top */
+}
+
+.live-pulse {
+  background: #ef4444;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 12px;
+  box-shadow: 0 0 15px #ef4444;
+}
+
+.view-count {
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stream-center { margin-bottom: 30px; }
+
+.match-title {
+  font-size: 36px;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+.match-subtitle {
+  font-size: 20px;
+  color: #d4d4d8;
+  margin-bottom: 20px;
+}
+
+.stream-tags { display: flex; gap: 10px; }
+.tag {
+  background: rgba(139, 92, 246, 0.2);
+  color: #d8b4fe;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.stream-actions { display: flex; gap: 15px; }
+.btn-watch {
+  background: white;
+  color: black;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.btn-chat {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* --- MATCHES GRID --- */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.see-all-btn {
+  color: #8b5cf6;
+  background: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.match-card {
+  background: #18181b;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #27272a;
+  transition: 0.3s;
+}
+
+.match-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border-color: #8b5cf6;
+}
+
+.match-img-container {
+  position: relative;
+  aspect-ratio: 16/9;
+}
+
+.match-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.match-status-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.8);
+  color: #4ade80;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.viewer-count {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.match-body { padding: 20px; }
+
+.league-badge {
+  font-size: 11px;
+  color: #a1a1aa;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.match-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.match-meta {
+  color: #71717a;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.btn-watch-sm {
+  width: 100%;
+  background: #27272a;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-watch-sm:hover { background: #3f3f46; }
